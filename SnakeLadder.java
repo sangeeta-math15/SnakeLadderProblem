@@ -4,7 +4,7 @@ public class SnakeLadder {
 	static int position = 0;
 	static int new_position = 0;
 	static int number = 0;
-	//static int counter = 0;
+	static int counter = 0;
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to SnakeLadder Problem");
@@ -16,14 +16,14 @@ public class SnakeLadder {
 			switch (choice) {
 			case 1:
 				System.out.println("Ladder is here");
-				int number= (int) (Math.random() * 6) + 1;
+				int number = (int) (Math.random() * 6) + 1;
 				System.out.println("Number you received==>" + number);
 				position = position + number;
 				if (position > 100) {
 					position = position - number;
 
 				}
-				
+				counter++;
 
 				break;
 			case 2:
@@ -38,7 +38,7 @@ public class SnakeLadder {
 				if (position < 0) {
 					position = 0;
 				}
-				
+				counter++;
 				break;
 			default:
 				System.out.println("no switch");
@@ -83,7 +83,7 @@ public class SnakeLadder {
 		}
 
 		System.out.println("you are win");
-	
+		System.out.println("you are win and counter is==>" + counter);
 	}
 
 }
